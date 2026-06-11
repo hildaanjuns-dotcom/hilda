@@ -11,10 +11,10 @@
 <nav>
     <div class="logo">WEB TI 2026</div>
     <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="profile.html">Profile</a>
-        <a href="contact.html">Contact</a>
-        <a href="mahasiswa.html">Mahasiswa</a>
+        <a href="index.php">Home</a>
+        <a href="profile.php">Profile</a>
+        <a href="contact.php">Contact</a>
+        <a href="mahasiswa.php">Mahasiswa</a>
     </div>
 </nav>
 

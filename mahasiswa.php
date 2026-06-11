@@ -14,50 +14,48 @@
         <table border="1" align="center" cellspacing="5px" cellpadding="10px">
             <tr>
                 <td>
-                    <a href=index.html>Home</a>
+                    <a href=index.php>Home</a>
                 </td>
                 <td>
-                    <a href=about.html>About</a>
+                    <a href=about.php>About</a>
                 </td>
                 <td>
-                    <a href=contact.html>Contact</a>
+                    <a href=contact.php>Contact</a>
                 </td>
                 <td>
-                    <a href="mahasiswa.html">Data Mahasiswa</a>
+                    <a href="mahasiswa.php">Data Mahasiswa</a>
                 </td>
             </tr>
         </table>
         <h2>
             Data Mahasiswa
         </h2>
-      <a href="tambahdata.html">
+      <a href="tambahdata.php">
         <button>Tambah Data</button>
     </a>
         <table border="1" cellpadding="5px">
             <tr>
-                <th rowspan="2">No</th>
-                <th rowspan="2">Nama</th>
-                <th rowspan="2">Nim</th>
-                <th rowspan="2">Foto</th>
-                <th colspan="3">Nilai</th>
-                <!-- <td>Baris 1, kolom2</td> -->
-            </tr>
-            <tr>
-                <!-- <td>Baris 2, kolom 1</td> -->
-                <th>UTS</th>
-                <th>UAS</th>
-                <th>Tugas</th>
-
+                <th>No</th>
+                <th>Nama</th>
+                <th>Nim</th>
+                <th>Jurusan</th>
+                <th>Email</th>
+                <th>No. HP</th>
+                <th>Foto</th>
+                <th>Aksi</th>
             </tr>
         <tr>
             <td align="center">1</td>
             <td>Hilda Anjun Safana</td>
             <td>13242520029</td>
+            <td align="center">Teknologi Informasi</td>
+            <td align="center">hildaanjuns@gmail.com</td>
+            <td align="center">085165822489</td>
             <td><img src="aset/image/foto meme.jpg" width="70px"></td>
-            <td align="center">90</td>
-            <td align="center">85</td>
-            <td align="center">50</td>
-        </tr>
+        <td>
+            <a href="editdata.php"><button>Edit</button></a>
+            <a href="deteledata.php"><button>Hapus</button></a>
+        </td>
         </table>
         <hr>
          <table border="1" cellpadding="5px">
