@@ -1,3 +1,31 @@
+<?php
+
+    // API
+    $koneksi = mysqli_connect("localhost","root","","weeklyhld");
+
+    $query = "SELECT * FROM mahasiswa";
+
+    $result = mysqli_query($koneksi, $query); /// lemari isi data
+    
+    // while ($mhs = mysqli_fetch_assoc($result))
+    // {
+    //     var_dump($mhs);
+    // }
+
+
+    /// ambil data (fetch) dari lemari
+    /// mysqli_fetch_row array number
+    /// mysqli_fetch_assoc
+    /// mysqli_fetch_array
+    /// mysqli_fetch_object
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,18 +72,26 @@
                 <th>Foto</th>
                 <th>Aksi</th>
             </tr>
+                  <?php
+                while($mhs = mysqli_fetch_assoc($result))
+                    {  
+            ?>
         <tr>
             <td align="center">1</td>
-            <td>Hilda Anjun Safana</td>
-            <td>13242520029</td>
-            <td align="center">Teknologi Informasi</td>
-            <td align="center">hildaanjuns@gmail.com</td>
-            <td align="center">085165822489</td>
+            <td><?php echo $mhs["nama"] ?></td>
+            <td><?php echo $mhs["nim"] ?></td>
+            <td align="center"><?php echo $mhs["jurusan"] ?></td>
+            <td align="center"><?php echo $mhs["email"] ?></td>
+            <td align="center"><?php echo $mhs["no_hp"] ?></td>
             <td><img src="aset/image/foto meme.jpg" width="70px"></td>
         <td>
             <a href="editdata.php"><button>Edit</button></a>
             <a href="deteledata.php"><button>Hapus</button></a>
         </td>
+        </tr>
+        <?php
+                    }
+        ?>      
         </table>
         <hr>
          <table border="1" cellpadding="5px">
