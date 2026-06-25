@@ -73,11 +73,12 @@
                 <th>Aksi</th>
             </tr>
                   <?php
+                  $no = 1;
                 while($mhs = mysqli_fetch_assoc($result))
                     {  
             ?>
         <tr>
-            <td align="center">1</td>
+            <td align="center"><?=$no ?></td>
             <td><?php echo $mhs["nama"] ?></td>
             <td><?php echo $mhs["nim"] ?></td>
             <td align="center"><?php echo $mhs["jurusan"] ?></td>
@@ -90,6 +91,7 @@
         </td>
         </tr>
         <?php
+                    $no++;
                     }
         ?>      
         </table>
