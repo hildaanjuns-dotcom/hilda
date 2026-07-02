@@ -1,21 +1,9 @@
 <?php
 require 'fungsi.php';
 
-if (isset($_POST['kirim'])) {
-
-    $nama    = $_POST['nama'];
-    $nim     = $_POST['nim'];
-    $jurusan = $_POST['jurusan'];
-    $email   = $_POST['email'];
-    $no_hp   = $_POST['no_hp'];
-    $foto    = $_POST['foto'];
-
-    $query = "INSERT INTO mahasiswa
-                (nama, nim, jurusan, email, no_hp, foto)
-              VALUES
-                ('$nama', '$nim', '$jurusan', '$email', '$no_hp', '$foto')";
-
-    if (mysqli_query($koneksi, $query)) {
+if (isset($_POST['kirim'])) 
+{
+    if (tambahdata($_POST, $_FILES["foto"]) > 0) {
         echo "
         <script>
             alert('Data berhasil ditambahkan');
@@ -39,7 +27,7 @@ if (isset($_POST['kirim'])) {
 
 <h2>Tambah Data Mahasiswa</h2>
 
-<form action="" method="post">
+<form action="" method="post" enctype="multipart/from-data" >
     <table cellpadding="5">
 
         <tr>
@@ -69,7 +57,7 @@ if (isset($_POST['kirim'])) {
 
         <tr>
             <td>Foto</td>
-            <td><input type="text" name="foto"></td>
+            <td><input type="file" name="foto"></td>
         </tr>
 
         <tr>
